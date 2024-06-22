@@ -13,7 +13,8 @@
     <h2>Age : {{age}}</h2>
     <h2>List : {{p_list}}</h2>
 
-
+     <!-- Template Filtering -->
+      
     {{p_list}}
     <h1>{{ p_list | join:" - " }}</h1>
     <h1>{{ Birthday | date:"D d M Y" }}</h1>
@@ -24,10 +25,14 @@
     <!-- Conditional Statement -->
     {% if age >= 20 %}
     <h4>You will Get Driving License</h4>
-    {% elif age >= 10 and age <= 19 %} <h4>You will Not Get Driving License</h4>
-        {% else %}
-        <h4>You are a Child</h4>
-        {%endif%}
+    
+    {% elif age >= 10 and age <= 19 %}
+     <h4>You will Not Get Driving License</h4>
+
+    {% else %}
+    <h4>You are a Child</h4>
+
+    {%endif%}
 
         <!-- For Loop -->
         {% for i in courses %}
