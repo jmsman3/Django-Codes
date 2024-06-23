@@ -1,0 +1,32 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block content %}
+{{block.super}}
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">UserId</th>
+            <th scope="col">id</th>
+            <th scope="col">title</th>
+            <th scope="col">Body</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        {% for i in data %}
+        <tr>
+            <th scope="row">{{i.userId}}</th>
+            <td>{{i.it}}</td>
+            <td>{{i.title}}</td>
+            <td>{{i.body}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<h1>i am inside first app</h1>
+<img src="{% static 'images/bird1.webp'%}" alt="bird1 image here">
+
+{% endblock %}
