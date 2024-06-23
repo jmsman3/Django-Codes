@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <!-- Normal Key-Value Print -->
+    <h1> This is Chicago , ites CM PUnk Home</h1>
+    <h2>Author : {{author}}</h2>
+    <h2>Age : {{age}}</h2>
+       
+    <!-- Doing Something using Loop -->
+    {% for i in courses %}
+     <h3>Course id:- {{i.id}} ,Course name:- {{i.name}} ,Course fee:- {{i.fee}}</h3>
+    {% endfor %}
+
+    <!-- Conditional Statement -->
+     {% if age >= 20 %}
+     <h4>You Will get the License</h4>
+     {% elif age >= 10 and   age <= 19 %}
+     <h4> You will not get the License </h4>
+     {% else %}
+     <h4>You are A child,thank you.</h4>
+     {% endif %}
+    
+    <!-- Template Filtering in Django -->
+     <!-- "Add" -filter -->
+    <h1> {{ value1 | add:"2" }}</h1>  
+
+    <!-- add slashes before quotes , But aita aikhan e kaaj kortese na i do not know why,If value is “I’m Jai”, the output will be “I\’m Jai”. -->
+    <h1>  {{ value2| addslashes }}</h1>
+
+    <!-- "Capfirst"- If value is “jai”, the output will be “Jai”. -->
+    <h1>{{ value3 | capfirst }}</h1>
+
+    <!-- "center" -It is used to center the value in a field of a given width -->
+    <h1>{{ value4 | center:"15" }}</h1>
+
+    <!-- "cut" - Removes Spaces from the string -->
+    <h1>{{ value5 | cut:" " }}</h1>
+
+    <!--  format a date and Time  ,Text date ,then Digit Date -->
+    <h1>{{ value6 | date:"D d M Y" }}</h1>      
+    <h1>{{ value6 |date:"SHORT_DATE_FORMAT" }}</h1>    
+       
+
+    <!--  "default" , mane default er jaigai amra je kono name use korte parbo -->
+    <h1>{{ value7 | default:"nothing" }}</h1>
+
+    <!--  dictsort (name, age) mane amra je "key" debo ,sei key er value gulo k sort korbe -->
+    <h1>{{ value8 | dictsort:"name" }}</h1>
+    <h1>{{ value8 | dictsort:"age" }}</h1>
+
+    <!-- divisibleby   (It returns True if the value is divisible by the argument) -->
+     <h1>{{ value9 | divisibleby:"3" }}</h1>
+     <h1>{{ value9 | divisibleby:"4" }}</h1>
+
+
+    <!-- "filesizeformat"  , If value is 123456789, the output would be 117.7 MB. -->
+     <h1>{{ value10 | filesizeformat }}</h1>
+     <h1>{{ 4567878754254254| filesizeformat }}</h1>
+
+
+     <!-- "first" , It is used to return the first item in a list. -->
+     <h1>{{ value11 |first }}</h1>
+
+
+     <!-- "join"  , It is used to join a list with a string. If value is the list [‘a’, ‘b’, ‘c’], the output will be the string “a // b // c”. -->
+     <h1>{{ value12 |join:" // "}}</h1> 
+     <h1>{{ value12 |join:" "}}</h1> 
+    
+    
+    <!-- "Last" , It is used to return the Last item in a list. -->
+    <h1>{{ value11 | last  }}</h1>
+
+
+    <!-- " length" , If value is [‘a’, ‘b’, ‘c’, ‘d’] or “abcd”, the output will be 4. -->
+    <h1>{{ value11 |  length  }}</h1>
+
+
+    <!-- "linenumbers" , It is used to display text with line numbers -->
+    <h1>{{ value13 |  linenumbers }}</h1>
+    
+
+    <!-- lower It is used to converts a string into "All" lowercase. -->
+    <h1>{{ value14 | lower }}</h1>
+
+
+    <!-- "make_list"    ,    String to List Converter -->
+    <h1>{{ value15 | make_list }}</h1>
+    <h1>{{ 65765675 | make_list }}</h1>
+
+
+    
+    <!-- "random"    ,  Random item Return from the giver list -->
+    <h1>{{ value11 | random }}</h1>
+    
+
+      
+    <!-- "Slice kore"    ,  Random item Return from the giver list -->
+    <h1> Sting e kaaj kore : {{ value16 | slice:":2" }}</h1> 
+    <h1> List e kaaj kore: {{ value11 | slice:":2" }}</h1>
+
+     
+
+    <!-- "slugify", Per WOrd er majkhane hypen Add koe   -->
+    <h1> Sting e kaaj kore : {{ value17 | slugify }}</h1> 
+    <h1> List e kaaj kore: {{ value11 | slugify }}</h1>
+
+    
+    <!-- "time", value6 is Equivalent to current time -->
+    <h1> Shudu Time tuku dekhai:  {{ value6 | time:"H:i" }}</h1> 
+
+
+    <!-- "timesince", It is used to format a date as the time since that date (e.g., “4 days, 6 hours”). -->
+    <h1> My Blog Posted: {{ blog_date | timesince:comment_date }}</h1> 
+
+
+    <!-- "title", first letter Capital ,other cmall letter , ANy line k title banai -->
+    <h1> {{ value18 | title }}</h1> 
+
+    <!-- "title",eturns an HTML unordered list – WITHOUT opening and closing <ul> tags. -->
+    <h3>{{ var | unordered_list }}</h3>
+
+    
+    <!-- "upper",Makes All Upper -->
+    <h3>{{value18 | upper }}</h3>
+
+    <!-- "wordcount", Words Count Kore dai -->
+    <h1>{{value19 | wordcount }}</h1>
+
+
+    <!-- "Truncatechars Filter", words...... ai rokom blog er moto show kore  --->   
+    <h1>{{ value5 | truncatechars:7 }}</h1>
+
+
+    <!-- "Striptags Filter", html to normal line Convertor  --->   
+    <h1>{{ value20 | striptags }}</h1>
+    <h1>{{ '<b>This</b> is <em>a</em> <button>Button</button>' | striptags }}</h1>
+
+    <!-- "Truncatechars Filter", words...... ai rokom blog er moto show kore  --->   
+    <h1>{{ value5 | truncatechars:7 }}</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
