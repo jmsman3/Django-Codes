@@ -1,0 +1,199 @@
+html,body{
+    /* width: 1200px; */
+  
+    /* border: 1px solid gray; */
+    height: 100%;
+    margin: auto;
+    background-color: white;
+    /* display: flex; */
+    /* flex-direction: column; */
+
+}
+body{
+    min-height: 100vh;
+    background-color: white;
+}
+li{list-style: none;}
+nav{
+    background-color: aqua;
+    margin-bottom: 13px;
+}
+.menu{
+    font-size: 20px;
+}
+.menu:hover{
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    
+}
+
+.banner-container{
+    width: 1200px;
+    height: 500px;
+    /* border: 1px solid gray; */
+    margin: auto;
+    padding: 30px;
+
+}
+.banner{
+ display: flex;
+ text-align: center;
+ justify-content: space-around;
+ align-items: center;
+ background: linear-gradient(rgb(65, 206, 206),rgb(205, 251, 252));
+ box-shadow: 4px 4px 8px gray;
+ border-radius: 10px;
+ height: 450px;
+
+}
+
+.bn-img{
+    width: 322px;
+    margin-top: -50px;
+}
+
+.service-container{
+    width: 1200px;
+    margin: auto;
+    margin-top: 60px;
+    
+}
+.title{
+    font-size: 44px;
+    color: rgb(10, 131, 131);
+    text-align: center;
+}
+.doctors-container{
+    margin-top: 50px;
+    padding: 30px;
+}
+.doc-card{
+    width: 320px;
+
+    height: 370px;
+    box-shadow: 4px 4px 8px gray;
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px;
+    background-color: white;
+
+}
+.doc-img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}
+
+#search{
+    padding: 10px;
+    border: none;
+    width: 75%;
+}
+
+.nodata{
+    display: none;
+}
+
+#spinner{
+    display: none;
+}
+.review-card{
+    width: 300px;
+    height: 300px;
+    box-shadow: 4px 4px 8px gray ;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+}
+.review-card img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+
+}
+footer{
+    width:100%;
+    padding: 50px;
+    margin-top: auto;
+    background: linear-gradient(66.15deg, #1CA8C7 -5.25%, #439FA5 46.76%, #4C7D8C 98.77%);
+    
+}
+
+.doc-details-container{
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+    gap: 50px;
+    width: 75%;
+    margin: auto;
+
+}
+.doctor-img img{
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+}
+.doc-details-btn{
+    border: none;
+    padding: 5px 10px;
+    background-color: gray;
+    color: white;
+    border-radius: 10px;
+}
+
+.card-container{
+    height: auto;
+    width: 1300px;
+   border: 1px solid gray;
+   padding: 20px;
+
+}
+.card{
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px gray;
+    margin-left: 0.5rem;  /* This represents mx-2 (margin-left and margin-right) */
+    margin-right: 0.5rem;
+    margin-top: 0.99rem;  /* This represents my-1 (margin-top and margin-bottom) */
+    margin-bottom: 0.99rem;
+    width: 18rem;
+}
+
+.card-img-top {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    box-shadow: 2px 2px 4px gray;
+}
+
+.card-single{
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px gray;
+    margin-left: 0.5rem;  /* This represents mx-2 (margin-left and margin-right) */
+    margin-right: 0.5rem;
+    margin-top: 0.99rem;  /* This represents my-1 (margin-top and margin-bottom) */
+    margin-bottom: 0.99rem;
+    width: 50rem;
+}
+
+.single-card-container{
+    height: auto;
+    width: 850px;
+   border: 5px solid gray;
+   padding: 20px;
+   background-color: white;
+   border-radius: 10px;
+ 
+
+}
+.detail-image-product{
+    box-shadow: 4px 4px 8px gray;
+    margin-left: 50px;
+    align-items: center;
+    text-align: center;
+    
+
+}
+
+#spinner{
+    display: none;
+}
